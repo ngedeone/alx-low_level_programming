@@ -18,9 +18,12 @@ int main(void)
 			c++;
 		}
 	while
-		(c <= 'Z') {
-			putchar(c);
+		(d <= 'Z') {
+			putchar(d);
 			d++;
 		}
+	putchar('$');
+	putchar('\n');
+
 	return (0);
 }
