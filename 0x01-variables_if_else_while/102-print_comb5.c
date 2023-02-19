@@ -7,48 +7,27 @@
 
 int main(void)
 {
-	int i, j;
+	int y, z;
 
-	for (i = 0; i <= 99; i++)
+	for (y = 0; y < 100; y++)
 	{
-		for (j = i; j <= 99; j++)
+		for (z = 0; z < 100; z++)
 		{
-			if (i != j)
+			if (y < z)
 			{
-				if (i != 0 || j != 1)
+				putchar((y / 10) + 48);
+				putchar((y % 10) + 48);
+				putchar(' ');
+				putchar((z / 10) + 48);
+				putchar((z % 10) + 48);
+				if (y != 98 || z != 99)
 				{
 					putchar(',');
 					putchar(' ');
 				}
-
-				if (i < 10)
-				{
-					putchar('0');
-					putchar(i + '0');
-				}
-				else
-				{
-					putchar((i / 10) + '0');
-					putchar((i % 10) + '0');
-				}
-
-				putchar(' ');
-				if (j < 10)
-				{
-					putchar('0');
-					putchar(j + '0');
-				}
-				else
-				{
-					putchar((j / 10) + '0');
-					putchar((j % 10) + '0');
-				}
 			}
 		}
 	}
-
 	putchar('\n');
-
 	return (0);
 }
-
